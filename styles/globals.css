@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.main {
+  width: 100vw;
+  min-height: 100vh;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  padding: 120px 24px 160px 24px;
+  pointer-events: none;
+}
+
+/* Form Component */
+.input_label{
+  @apply block text-sm font-semibold text-gray-800;
+}
+
+.input_block{
+  @apply block w-full px-4 py-2 mt-2 text-gray-700 bg-white border rounded-md focus:border-gray-400 focus:ring-gray-300 focus:outline-none focus:ring focus:ring-opacity-40;
+}
