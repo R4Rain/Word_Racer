@@ -5,7 +5,7 @@ import '@styles/globals.css';
 
 export const metadata = {
   title: "WordRacer",
-  description: "Speed Typing Website"
+  description: "Speed typing website"
 }
 
 const RootLayout = ({ children }) => {
