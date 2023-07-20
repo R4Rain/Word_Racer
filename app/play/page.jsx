@@ -306,7 +306,7 @@ const Play = () => {
                 <img
                   src={fetchData ? "/assets/loading.gif" : "/assets/idle.svg"}
                   alt={fetchData ? "Loading" : "Idle"}
-                  className="md:w-[350px] lg:w-[550px] h-[550px] object-contain"
+                  className="md:w-[350px] lg:w-[550px] h-[400px] object-contain"
                 />
                 <Typography variant="lead" className="text-md text-center italic font-light text-gray-500 max-w-[75%]">
                   { fetchData ? `Get ready in ${startCountDown}...` : "Press the start button to start the typing test" }

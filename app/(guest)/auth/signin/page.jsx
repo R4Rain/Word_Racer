@@ -41,7 +41,7 @@ const Signin = () => {
 
   return (
 		<section className="w-full relative">
-			<div className="px-5 py-32">
+			<div className="px-5 py-24">
 				<Formik
 					initialValues={{
 						email: '',
