@@ -16,7 +16,9 @@ npm install
 
 - Set up environment variables (check at the `.env.example`)
 
-- Run the development server:
+- Set up MongoDB as database and UploadThing as image server
+
+- Run the development server
 ```bash
 npm run dev
 ```
