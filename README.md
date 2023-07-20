@@ -1,34 +1,41 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## WordRacer
+WordRacer is a web-based typing speed test game that can measures user's typing speed and accuracy. It is built with **Next.js** as the full-stack framework, **Tailwind** as the CSS framework, **MongoDB** as the database, and **UploadThing** as the image server. 
 
-## Getting Started
+## Key features
+- **Play**: This is where users can test their typing skills by completing the provided test. It measures user's words-per-minute (WPM), accuracy, and time taken to complete the test.
 
-First, run the development server:
+- **Leaderboard**: This is where users can show off their highest WPM and become the top typer in the website.
 
+- **Profile**: This is where users can check their recent tests, statistics, and update their profile.
+
+## How to run the project
+- Install packages
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- Set up environment variables (check at the `.env.example`)
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+- Run the development server:
+```bash
+npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Results
+### Main Page
+![Main](/samples/Main.png)
+### Play Page
+![Play](/samples/Play.png)
+### Leaderboard Page
+![Leaderboard](/samples/Leaderboard.png)
+### Profile Page
+![Profile](/samples/Profile.png)
 
-## Learn More
+For more details, you can check out the deployed website at [word-racer-beta.vercel.app](https://word-racer-beta.vercel.app/)
 
-To learn more about Next.js, take a look at the following resources:
+## Future plans
+- [ ] Implement refresh / access tokens
+- [ ] Add a test difficulty
+- [ ] ...
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
