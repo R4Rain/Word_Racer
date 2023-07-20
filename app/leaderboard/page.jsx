@@ -92,6 +92,8 @@ const Leaderboard = () => {
                       const { wpm, taken } = highestWPM;
                       const isLast = index === users.length - 1;
                       const classes = isLast ? "px-3 py-4" : "px-3 py-4 border-b border-blue-gray-50";
+                      const this_rank = (page - 1) * LIMIT_USER + index + 1;
+
                       const rankColor = (rank) => {
                         if(rank === 1) {
                           return "bg-amber-100 text-amber-600"
@@ -116,14 +118,14 @@ const Leaderboard = () => {
                         <tr key={index} className="whitespace-nowrap">
                           <td className={classes}>
                             <div className="flex justify-center items-center">
-                              <Typography as="span" variant="small" color="gray" className={`w-8 h-8 inline-flex justify-center items-center rounded-full  font-bold text-lg text-center ${rankColor(index+1)}`}>
-                                {((page - 1) * LIMIT_USER) + index + 1}
+                              <Typography as="span" variant="small" color="gray" className={`w-8 h-8 inline-flex justify-center items-center rounded-full  font-bold text-lg text-center ${rankColor(this_rank)}`}>
+                                {this_rank}
                               </Typography>
                             </div>
                           </td>
                           <td className={classes}>
                             <div className="flex items-center gap-4">
-                              <Avatar src={picture?.url ? picture.url : "/assets/default.png"} withBorder={true} color={profileBorderColor(index+1)} alt={name} size="sm" className="p-0.5"/>
+                              <Avatar src={picture?.url ? picture.url : "/assets/default.png"} withBorder={true} color={profileBorderColor(this_rank)} alt={name} size="sm" className="p-0.5"/>
                               <Link href={`/profile/${id}`} className="cursor-pointer pointer-events-auto">
                                 <Typography variant="small" className="font-bold text-gray-500 hover:text-gray-600 hover:underline underline-offset-2">
                                   { name }
@@ -137,7 +139,7 @@ const Leaderboard = () => {
                             </Typography>
                           </td>
                           <td className={`flex justify-center ${classes}`}>
-                            <Typography variant="small" color="gray" className={`font-bold text-center w-1/4 rounded-lg py-2 ${rankColor(index + 1)}`}>
+                            <Typography variant="small" color="gray" className={`font-bold text-center w-1/4 rounded-lg py-2 ${rankColor(this_rank)}`}>
                               { wpm }
                             </Typography>
                           </td>
