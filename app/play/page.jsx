@@ -297,12 +297,12 @@ const Play = () => {
         failed={failed}
         authStatus={sessionStatus}
       />
-      <div className="px-5 py-6 lg:px-24 lg:py-10">
+      <div className="px-5 py-6 lg:px-24">
         <div className="grid mx-auto gap-4 lg:grid-cols-12">
-          <div className="w-full h-fit px-6 pt-6 pb-7 bg-white rounded-xl shadow-sm border-2 border-blue-gray-50 mr-auto lg:col-span-8">
+          <div className="w-full h-full px-6 pt-6 pb-7 bg-white rounded-xl shadow-sm border-2 border-blue-gray-50 mr-auto lg:col-span-8 grid content-between">
             {
               status === "idle" ?
-              <div className="mb-10 w-full h-full flex flex-col items-center justify-center gap-2">
+              <div className="mb-10 flex flex-col items-center justify-center gap-2">
                 <img
                   src={fetchData ? "/assets/loading.gif" : "/assets/idle.svg"}
                   alt={fetchData ? "Loading" : "Idle"}
@@ -320,7 +320,7 @@ const Play = () => {
                   <div className="h-6 rounded-full bg-gray-200 w-full mb-4"/>
                 </div>
                 :
-                <div className="w-full h-full lg:min-h-[300px] mb-10">
+                <div className="w-full mb-10">
                   <div className="flex flex-row justify-around gap-6 mb-4">
                     <div className="text-center">
                       <Typography variant="h4" className="text-2xl font-extrabold">Time</Typography>
@@ -347,7 +347,7 @@ const Play = () => {
                   </div>
                   <Typography 
                     variant="paragraph" 
-                    className="lg:text-3xl md:text-2xl font-pt font-bold leading-loose tracking-wide select-none" 
+                    className="lg:text-2xl md:text-2xl font-pt font-bold leading-loose tracking-wide select-none" 
                     color="blue-gray"
                   >
                     { handleRenderText() }
@@ -355,7 +355,7 @@ const Play = () => {
                 </div>
               )
             }
-            <div className="w-full mt-auto">
+            <div className="w-full">
               { status === "idle" ?
                 <Button 
                   className="mx-auto px-6 py-3 text-md font-bold flex items-center gap-3" 

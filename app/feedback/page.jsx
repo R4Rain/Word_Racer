@@ -38,7 +38,7 @@ const Feedback = () => {
   }
 
   return (
-    <section className="w-full relative lg:px-24 px-10 py-12">
+    <section className="w-full relative lg:px-24 px-10 py-6">
       <div className="mx-auto rounded-xl shadow-sm border-2 border-blue-gray-50 max-w-7xl">
         <Card className="w-full h-full">
           <CardHeader floated={false} shadow={false} className="rounded-none mb-2">
@@ -57,7 +57,7 @@ const Feedback = () => {
                 <Textarea label="Message" value={message} onChange={handleChange}/>
               </div>
             </CardBody>
-            <CardFooter className="pt-0">
+            <CardFooter className="pt-0 flex justify-end">
               <Button type="submit" variant="gradient" color="blue" disabled={isSubmitting || message.length === 0}>
                 { isSubmitting ? "Loading..." : "Submit" }
               </Button>

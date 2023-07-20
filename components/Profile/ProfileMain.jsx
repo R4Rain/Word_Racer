@@ -22,7 +22,7 @@ const ProfileMain = ({ loadingProfile, loadingRecord, user, session, openEdit, s
         <div className="relative flex flex-wrap items-center pt-4 pb-5">
           <div className='ms-5 w-full'>
             <div className="-mt-16 w-40">
-              <div className="w-40">
+              <div className="w-40 h-40">
                 { loadingProfile ?
                   <div className="h-40 w-full rounded-full border border-3 border-gray-300 bg-gray-200"/>
                   :

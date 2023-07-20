@@ -18,7 +18,7 @@ import Link from "next/link"
 
 const UserRecord = ({ loading, records, title, titleVariant, requiredAuth, authStatus }) => {
   const TABLE_HEAD = ["Taken", "WPM", "Accuracy"];
-  const MAX_ROW = 8;
+  const MAX_ROW = 6;
   const MAX_PAGE = Math.ceil(records.length / MAX_ROW) || 1;
   const [page, setPage] = useState(1);
   const paginate = (this_array) => {

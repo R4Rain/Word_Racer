@@ -30,9 +30,10 @@ export const POST = async (req) => {
       })
       await newRecord.save();
 
-      const highestRecord = await Record.find({}).sort({wpm: -1}).limit(1);
+      const highestRecord = await Record.find({user: userId}).sort({wpm: -1}).limit(1);
       if(highestRecord) {
         userExist.highestWPM.wpm = highestRecord[0].wpm;
+        userExist.highestWPM.taken = highestRecord[0].createdOn;
         await userExist.save();
       }
 

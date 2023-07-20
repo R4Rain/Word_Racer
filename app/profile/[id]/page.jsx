@@ -193,7 +193,7 @@ const Profile = ({ params }) => {
   else if(errorFetch) return <Error/>
 
   return (
-    <section className="mx-12 my-24 flex flex-col justify-center gap-4 relative">
+    <section className="mx-12 my-20 flex flex-col justify-center gap-4 relative">
       <Dialog open={edit}>
         <Formik
           initialValues={{

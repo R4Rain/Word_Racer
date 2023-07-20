@@ -7,7 +7,7 @@ import Link from 'next/link';
 
 const Leaderboard = () => {
   const searchParams = useSearchParams();
-  const LIMIT_USER = 10;
+  const LIMIT_USER = 5;
   const [page, setPage] = useState(parseInt(searchParams.get("page")) || 1);
   const [maxPage, setMaxPage] = useState(1);
   const [users, setUsers] = useState([]);
@@ -39,7 +39,7 @@ const Leaderboard = () => {
   const TABLE_HEAD = ["Rank", "Name", "Taken", "Highest WPM"];
 
   return (
-    <section className="w-full relative lg:px-24 px-10 py-12">
+    <section className="w-full relative lg:px-24 px-10 py-6">
       <div className="mx-auto rounded-xl shadow-sm border-2 border-blue-gray-50 max-w-7xl">
         <Card className="w-full h-full">
           <CardHeader floated={false} shadow={false} className="rounded-none mb-2">
