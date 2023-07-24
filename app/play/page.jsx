@@ -111,6 +111,7 @@ const Play = () => {
   }, [status]);
 
   const resetGame = () => {
+    setCharStatus([]);
     setCharIndex(0);
     setWordIndex(0);
     setWarning(false);
